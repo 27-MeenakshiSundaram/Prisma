@@ -90,7 +90,7 @@ describe("Student service",()=>{
     });
     it("Delete student details",async ()=>{
         const data:Student={
-              id:11,
+            id:11,
              name:'Sundar',
              age:25,
              address:'Madurai',

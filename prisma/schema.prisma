@@ -10,19 +10,19 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-// model School{
-//   id Int @id @default(autoincrement())
-//   name String
-//   email String @unique
-//   city String
-//   students Student[]
-// }
+model School{
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  city String
+  students Student[]
+}
 model Student{
   id Int @id @default(autoincrement())
   name String
   age Int
   address String
   email String @unique
-  //school School @relation(fields: [schoolId], references: [id])
+  school School @relation(fields: [schoolId], references: [id])
   schoolId Int 
 }
